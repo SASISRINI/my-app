@@ -35,7 +35,7 @@ node{
 		//  do nothing if there is an exception
 	}
    stage('Docker deployment'){
-   sh 'docker run -d -p 8030:8080 --name tomcattest5 sasisri/myweb:0.0.2' 
+   sh 'docker run -d -p 8020:8080 --name tomcattest6 sasisri/myweb:0.0.2' 
    }
 }
 }
