@@ -14,7 +14,7 @@ node{
 	          sh "${mvnHome}/bin/mvn sonar:sonar"
 	        }
 	    }
-   stage('Nexus Image Push in nexus'){
+   stage('Nexus Image Push in nexus1'){
    sh "docker login -u admin -p nexus123 13.233.25.38:8084"
    sh "docker tag sasisri/myweb:0.0.2 13.233.25.38:8084/damo:1.0.0"
    sh 'docker push 13.233.25.38:8084/damo:1.0.0'
