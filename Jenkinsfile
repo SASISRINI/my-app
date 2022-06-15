@@ -1,6 +1,6 @@
 node{
    stage('SCM Checkout'){
-     git 'https://github.com/damodaranj/my-app.git'
+     git 'https://github.com/SASISRINI/my-app.git'
    }
    stage('Compile-Package'){
 
@@ -14,7 +14,7 @@ node{
 	          sh "${mvnHome}/bin/mvn sonar:sonar"
 	        }
 	    }
-   stage('Nexus Image Push in nexus1'){
+   stage('Nexus Image Push in nexus2'){
    sh "docker login -u admin -p nexus123 13.233.25.38:8084"
    sh "docker tag sasisri/myweb:0.0.2 13.233.25.38:8084/damo:1.0.0"
    sh 'docker push 13.233.25.38:8084/damo:1.0.0'
