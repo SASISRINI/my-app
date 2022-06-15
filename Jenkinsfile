@@ -8,7 +8,7 @@ node{
       sh "${mvnHome}/bin/mvn clean package"
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
-   stage('SonarQube Analysis') {
+   stage('SonarQube Analysis 1') {
 	        def mvnHome =  tool name: 'sasisri', type: 'maven'
 	        withSonarQubeEnv('sonar') { 
 	          sh "${mvnHome}/bin/mvn sonar:sonar"
