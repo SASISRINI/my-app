@@ -15,9 +15,9 @@ node{
 	        }
 	    }
    stage('Nexus Image Push in nexus2'){
-   sh "docker login -u admin -p nexus123 13.233.25.38:8084"
-   sh "docker tag sasisri/myweb:0.0.2 13.233.25.38:8084/damo:1.0.0"
-   sh 'docker push 13.233.25.38:8084/damo:1.0.0'
+   sh "docker login -u admin -p sasisri 65.0.99.34:8088"
+   sh "docker tag sasisri/myweb:0.0.2 65.0.99.34:8088/damo:1.0.0"
+   sh 'docker push 65.0.99.34:8088/damo:1.0.0'
    }
    stage('Build Docker Imager'){
    sh 'docker build -t sasisri/myweb:0.0.2 .'
